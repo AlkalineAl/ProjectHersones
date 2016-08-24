@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="App2.RoutePointPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ListView >
+
+
+
+
+
+            <Grid Width="188">
+
+                <TextBlock>Название</TextBlock>
+                <TextBox x:Name="name_tb" Margin="0,25,0,0"></TextBox>
+            </Grid>
+            <Grid>
+
+                <TextBlock>Координаты</TextBlock>
+                <TextBox x:Name="Lon" Margin="0,30,0,0" Height="14" VerticalAlignment="Top"></TextBox>
+                <TextBox x:Name="lat" Margin="0,67,0,0"></TextBox>
+            </Grid>
+   
+            <Grid Width="308" Height="405">
+                <TextBlock>Описание</TextBlock>
+                <TextBox Margin="0,25,0,0" Text="Текст описания"></TextBox>
+            </Grid>
+        </ListView>
+    </Grid>
+    <Page.BottomAppBar >
+        <CommandBar >
+            <CommandBar.PrimaryCommands>
+                <AppBarButton  x:Name="AddAppBarButton" IsCompact="True" Label="Добавить" Icon="Save" Click="AddAppBarButton_Click" />
+                <AppBarButton  x:Name="DeleteAppBarButton" IsCompact="True" Label="Удалить" Icon="Delete"  />
+            </CommandBar.PrimaryCommands>
+
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

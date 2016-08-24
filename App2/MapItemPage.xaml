@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="App2.MapItemPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ListView >
+
+
+            <Grid>
+
+                <TextBlock>Номер раскопа</TextBlock>
+                <TextBox Margin="0,25,0,0"></TextBox>
+            </Grid>
+
+            <Grid Width="308" Height="65">
+                <TextBlock>Пласт</TextBlock>
+                <TextBox Margin="0,25,0,2"/>
+            </Grid>
+            <Grid>
+                <TextBlock>Глубина</TextBlock>
+                <TextBox Margin="0,25,-240,0"></TextBox>
+            </Grid>
+
+
+            <Grid Width="293">
+                <TextBlock>Сооружение</TextBlock>
+                <TextBox Margin="0,25,0,0" HorizontalAlignment="Left" Width="243"></TextBox>
+                <AppBarButton  x:Name="OpenAppBarButton" IsCompact="True" Label="Удалить" Icon="OpenFile"  Margin="243,11,0,0" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            </Grid>
+
+            <Grid Height="55">
+
+                <TextBlock>Номер находки</TextBlock>
+                <TextBlock Margin="0,25,0,0">245</TextBlock>
+            </Grid>
+            <Grid Width="188">
+
+                <TextBlock>Название</TextBlock>
+                <TextBox x:Name="name_tob" Margin="0,25,0,0"></TextBox>
+            </Grid>
+            <Grid>
+
+                <TextBlock>Координаты места находки</TextBlock>
+                <TextBox x:Name="latit" Margin="0,30,0,0" Height="14" VerticalAlignment="Top"></TextBox>
+                <TextBox x:Name="longit" Margin="0,67,0,0"></TextBox>
+            </Grid>
+            <Grid Height="99" Width="308">
+
+                <TextBlock>Год раскопа</TextBlock>
+                <DatePicker Margin="0,34,0,10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            </Grid>
+            <Grid x:Name="cb1" Width="308" Height="180">
+                <TextBlock>Описание</TextBlock>
+                <TextBox Margin="0,25,0,0" Text="Текст описания"></TextBox>
+
+                
+            </Grid>
+            <Grid  Width="308" Height="180">
+                <ComboBox x:Name="cb2" />
+            </Grid>
+            
+            
+            
+        </ListView>
+    </Grid>
+    <Page.BottomAppBar >
+        <CommandBar >
+            <CommandBar.PrimaryCommands>
+                <AppBarButton  x:Name="AddAppBarButton" IsCompact="True" Label="Добавить" Icon="Save" Click="AddAppBarButton_Click" />
+                <AppBarButton  x:Name="DeleteAppBarButton" IsCompact="True" Label="Удалить" Icon="Delete"  />
+            </CommandBar.PrimaryCommands>
+
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

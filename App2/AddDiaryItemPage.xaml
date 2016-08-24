@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="App2.AddDiaryItemPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ListView Margin="0,0,0,20" >
+
+            <Grid>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,31,0,0" TextWrapping="Wrap" Text="Содержание записи" Width="308" Height="39" VerticalAlignment="Top" FontSize="28" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" ManipulationMode="None"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="0,107,0,0" TextWrapping="Wrap" Text="Прикреплённый материал" Width="306" Height="39" VerticalAlignment="Top" FontSize="18" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" ManipulationMode="None"/>
+            </Grid>
+            <Grid Height="188" Width="348">
+                <Button x:Name="button" Content="Обзор галереи" HorizontalAlignment="Stretch" Margin="197,10,19,0" VerticalAlignment="Top" Click="OpenAppBarButton_Click"/>
+                <Button x:Name="button_Copy" Content="открыть Камеру" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,122,19,0" Click="AddAppBarButton_Click" Width="132
+                        "/>
+                <Image x:Name="image" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Margin="0,3,185,34" Stretch="UniformToFill"/>
+            </Grid>
+            <Grid Width="308" Height="82">
+                <TextBlock>Краткое описание (не обязательно)</TextBlock>
+                <TextBox Margin="0,25,0,0" Text=""></TextBox>
+            </Grid>
+            <Grid Width="308" Height="180">
+                <TextBlock>Детальное описание</TextBlock>
+                <TextBox Margin="0,25,0,0" Text=""></TextBox>
+            </Grid>
+
+
+
+
+
+        </ListView>
+
+
+
+
+    </Grid>
+    <Page.BottomAppBar >
+        <CommandBar VerticalAlignment="Bottom"  >
+            <CommandBar.PrimaryCommands>
+                <AppBarButton  x:Name="AddSpeachAppBarButton" IsCompact="True" Label="Голосовой ввод" Icon="Microphone" Click="AddSpeachAppBarButton_Click" />
+                <AppBarButton  x:Name="AddAppBarButton" IsCompact="True" Label="Добавить" Icon="Save" Click="AddAppBarButton_Click" />
+                <AppBarButton  x:Name="DeleteAppBarButton" IsCompact="True" Label="Удалить" Icon="Delete"  />
+
+            </CommandBar.PrimaryCommands>
+
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
